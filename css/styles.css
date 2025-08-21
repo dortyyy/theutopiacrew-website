@@ -12,3 +12,30 @@ body {
 body h1 {
     font-size: 4rem;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: auto;
+    padding: 1vw 25vw;
+}
+
+.container p {
+    text-align: left;
+}
+
+.subpanel {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin: 0.5em 0.25em;
+    padding: 0em 1em;
+}
+
+.main {
+    grid-column: 1;
+}
+
+.right {
+    grid-column: 2;
+}
