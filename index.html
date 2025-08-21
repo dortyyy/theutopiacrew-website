@@ -15,17 +15,6 @@
                     <p id="para" style="display: none;">I have text that appears from the button!</p>
                     <p></p>
                 </div>
-                <script>
-                    const butt = document.getElementById('butt')
-                    const para = document.getElementById('para')
-                    butt.addEventListener('click', function() {
-                        if (para.style.display === 'none') {
-                            para.style.display = 'block';
-                        } else {
-                            para.style.display = 'none';
-                        }
-                    });
-                </script>
             </div>
             <div class="panel right">
                 <div class="subpanel wombo">
@@ -39,5 +28,16 @@
                 </div>
             </div>
         </div>
+        <script>
+            const butt = document.getElementById('butt')
+            const para = document.getElementById('para')
+            butt.addEventListener('click', function() {
+                if (para.style.display === 'none') {
+                    para.style.display = 'block';
+                } else {
+                    para.style.display = 'none';
+                }
+            });
+        </script>
     </body>
 </html>
