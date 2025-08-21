@@ -21,6 +21,8 @@ body h1 {
     text-align: center;
     text-decoration: wavy;
     font-size: 24;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 .container {
