@@ -10,4 +10,54 @@
         <button type="button" onclick="document.getElementById('test').innerHTML = 'test'">hai :3</button>
         <h2 id="test"></h2>
     </body>
+</html><!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Utopia</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Utopia is Live</h1>
+            <p>World's best website</p>
+        </div>
+        <div class="container">
+            <div class="panel main">
+                <div class="subpanel welcome">
+                    <h2>Welcome to The Utopia</h2>
+                    <button class="butt test" id="butt">hai :3</button>
+                    <p id="para" style="display: none;">I have text that appears from the button!</p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="panel right">
+                <div class="subpanel links">
+                    <h2>Links</h2>
+                    <ul>
+                        <li><a href="https://info.dortcraft.club/">Minecraft Server</a></li>
+                    </ul>
+                </div>
+                <div class="subpanel combo">
+                    <h2>Hey...</h2>
+                    <p>we can be friends :)</p>
+                </div>
+                <div class="subpanel pits">
+                    <h2>Best Server</h2>
+                    <p>Don't forget about the pits #ravenfield-updates</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const butt = document.getElementById('butt')
+            const para = document.getElementById('para')
+            butt.addEventListener('click', function() {
+                if (para.style.display === 'none') {
+                    para.style.display = 'block';
+                } else {
+                    para.style.display = 'none';
+                }
+            });
+        </script>
+    </body>
 </html>
