@@ -9,8 +9,23 @@ body {
     color: white;
 }
 
-body h1 {
+.header h1 {
     font-size: 4rem;
+    margin-bottom: 0;
+}
+
+.header p {
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: lightgrey;
 }
 
 .butt {
@@ -27,21 +42,29 @@ body h1 {
 
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     margin: auto;
     padding: 1vw 25vw;
-}
-
-.container p {
-    text-align: left;
 }
 
 .subpanel {
     background: #111;
     border: 1px solid #333;
-    border-radius: 8px;
+    border-radius: 4px;
     margin: 0.5em 0.25em;
-    padding: 0em 1em;
+    padding: 0em 1.25em;
+}
+
+.subpanel p {
+    font-family: Georgia, serif;
+    text-align: left;
+}
+
+.subpanel ul {
+    font-family: Georgia, serif;
+    text-align: left; 
+    list-style-type: circle;
+    padding-left: 0.5em;
 }
 
 .main {
@@ -50,4 +73,13 @@ body h1 {
 
 .right {
     grid-column: 2;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        padding: 1vw 3vw;
+    }
+    html {
+        font-size: 2vw;
+    }
 }
