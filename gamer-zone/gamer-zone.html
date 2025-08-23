@@ -1,54 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>The Utopia</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header>
-            <h1><a href="#">Utopia is Live</a></h1>
-            <p style="margin:0;">World's best website</p>
-            <nav>
-                <a href="#">Home</a>
-            </nav>
-        </header>
-        <div class="container">
-            <div class="panel main">
-                <div class="subpanel welcome">
-                    <h2>Welcome to The Utopia</h2>
-                    <button class="butt test" id="butt">hai :3</button>
-                    <p id="para" style="display: none;">I have text that appears from the button!</p>
-                    <p></p>
-                </div>
-            </div>
-            <div class="panel right">
-                <div class="subpanel links">
-                    <h2>Links</h2>
-                    <ul>
-                        <li><a href="https://info.dortcraft.club/">Minecraft Server</a></li>
-                    </ul>
-                </div>
-                <div class="subpanel combo">
-                    <h2>Hey...</h2>
-                    <p>we can be friends :)</p>
-                </div>
-                <div class="subpanel pits">
-                    <h2>Best Server</h2>
-                    <p>Don't forget about the pits #ravenfield-updates</p>
-                </div>
-            </div>
-        </div>
-        <script>
-            const butt = document.getElementById('butt')
-            const para = document.getElementById('para')
-            butt.addEventListener('click', function () {
-                if (para.style.display === 'none') {
-                    para.style.display = 'block';
-                } else {
-                    para.style.display = 'none';
-                }
-            });
-        </script>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <title>Gamer Zone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      background: black;
+      color: #0f0;
+      overflow-x: hidden;
+    }
+
+    /* Matrix code background */
+    canvas#matrix {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+    }
+
+    header {
+      background: rgba(0,0,0,0.8);
+      text-align: center;
+      padding: 1rem;
+      border-bottom: 2px solid #0f0;
+      box-shadow: 0 0 15px #0f0;
+    }
+    header h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 15px #0f0;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: .5rem;
+    }
+    nav a {
+      color: #0f0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .sidebar, .main, .right {
+      background: rgba(0,0,0,0.7);
+      padding: 1rem;
+      border: 1px solid #0f0;
+      box-shadow: 0 0 10px #0f0 inset;
+    }
+
+    .post {
+      margin-bottom: 2rem;
+    }
+    .post h2 {
+      color: #0f0;
+      text-shadow: 0 0 10px #0f0;
+    }
+    .post p {
+      color: #ccc;
+    }
+
+    .crt {
+      animation: flicker 2s infinite;
+    }
+    @keyframes flicker {
+      0% { opacity: 1; }
+      5% { opacity: 0.9; }
+      10% { opacity: 1; }
+      15% { opacity: 0.95; }
+      20% { opacity: 1; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <header>
+    <h1 class="crt">GAMER ZONE</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">News</a>
+      <a href="#">Reviews</a>
+      <a href="#">Mods</a>
+      <a href="#">Guides</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Links</h3>
+      <ul>
+        <li><a href="https://store.steampowered.com" target="_blank">Steam</a></li>
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">Twitch</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="post">
+        <h2>🔥 Latest News: Ravenfield Modding Scene Explodes</h2>
+        <p>Fans have released over 500 new mods this week, ranging from WW2 campaigns to futuristic laser battles...</p>
+      </div>
+      <div class="post">
+        <h2>🎮 Review: Pizza Tower</h2>
+        <p>We dove into the chaotic world of Peppino’s pizza madness—here’s why it might be the best indie platformer in years.</p>
+      </div>
+    </div>
+
+    <div class="right">
+      <h3>Upcoming Releases</h3>
+      <p>Cyberpunk 2077: Phantom Liberty DLC</p>
+      <p>Stalker 2</p>
+      <p>Half-Life 3 (copium)</p>
+    </div>
+  </div>
+
+  <script>
+    // Matrix background
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    const letters = '01';
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function draw() {
+      ctx.fillStyle = 'rgba(0,0,0,0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = '#0F0';
+      ctx.font = fontSize + 'px monospace';
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters.charAt(Math.floor(Math.random() * letters.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+    setInterval(draw, 33);
+
+    window.addEventListener('resize', () => {
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+    });
+  </script>
+</body>
 </html>
