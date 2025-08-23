@@ -9,13 +9,13 @@ body {
     color: white;
 }
 
-.header h1 {
+header h1 {
     font-size: 4rem;
     margin-bottom: 0;
 }
 
-.header p {
-    margin: 0;
+header nav {
+    font-size: 1.5rem;
 }
 
 a {
@@ -23,7 +23,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+.container a:hover {
     text-decoration: underline;
     color: lightgrey;
 }
