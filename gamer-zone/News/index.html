@@ -3,45 +3,66 @@
 <head>
 <meta charset="utf-8">
 <title>Gamer Zone | News</title>
+
+<!-- Chakra Petch font -->
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+
 <style>
   body {
     margin: 0;
-    font-family: "Verdana", sans-serif;
-    background: #0b0c10 url('images/metal_bg.jpg') repeat;
-    color: #e0e0e0;
+    font-family: "Chakra Petch", Verdana, sans-serif;
+    background: #0a0a0a url('images/metal_bg.jpg') repeat;
+    color: #e8e8e8;
   }
 
   header {
-    background: linear-gradient(#1b2838, #0b0c10);
-    border-bottom: 3px solid #00aaff;
-    text-align: center;
-    padding: 1.5rem 0;
+    background: linear-gradient(#2a0000, #000);
+    border-bottom: 3px solid #d69a00;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+    padding: 1rem 2rem;
+  }
+  header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   header h1 {
-    font-family: "Impact", sans-serif;
+    font-family: "Chakra Petch", Impact, sans-serif;
     font-size: 3rem;
-    color: #00aaff;
-    text-shadow: 0 0 10px #00aaff;
+    color: #d69a00;
+    text-shadow: 0 0 10px #b30000, 0 0 20px #d69a00;
     margin: 0;
+    letter-spacing: 2px;
+  }
+  header img {
+    width: 200px;
+    height: auto;
   }
 
   nav {
     display: flex;
-    justify-content: center;
-    background: #101820;
-    border-top: 1px solid #00aaff;
-    border-bottom: 1px solid #00aaff;
+    justify-content: flex-end;
+    gap: 1rem;
   }
-  nav a {
-    color: #e0e0e0;
-    text-decoration: none;
-    padding: 1rem 1.5rem;
-    font-weight: bold;
-  }
-  nav a:hover {
-    background: #00aaff;
-    color: #000;
-  }
+  
+  .navlink {
+  color: #ffcc66;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.75rem;       /* make text same as Home page */
+  padding: 0.75rem 1rem;    /* match Home page spacing */
+  border-left: 1px solid #b30000;
+}
+
+.navlink:first-child {
+  border-left: none;
+}
+
+.navlink:hover {
+  background: #b30000;
+  color: #fff;
+  font-size: 1.75rem; /* keep size same on hover */
+}
 
   .container {
     display: flex;
@@ -54,16 +75,16 @@
   .news-post {
     width: 80%;
     max-width: 900px;
-    background: rgba(16,24,32,0.95);
+    background: rgba(20, 0, 0, 0.9);
     padding: 1.5rem;
-    border: 2px solid #1b2838;
+    border: 2px solid #300000;
     box-shadow: inset 0 0 15px #000;
     border-radius: 6px;
   }
 
   .news-post h2 {
-    color: #00aaff;
-    border-bottom: 1px solid #00aaff;
+    color: #ffcc66;
+    border-bottom: 1px solid #b30000;
     padding-bottom: 0.3rem;
   }
 
@@ -83,60 +104,78 @@
     width: 100%;
     max-height: 400px;
     object-fit: cover;
-    border: 2px solid #00aaff;
+    border: 2px solid #d69a00;
     margin-bottom: 1rem;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 450px;
+    border: 2px solid #d69a00;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: #ffcc66;
+  }
+  a:hover {
+    color: #fff;
+    text-decoration: underline;
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>GAMER ZONE NEWS</h1>
+  <div>
+    <img src="../assets/images/logo.png" alt="Gamer Zone Logo">
+    <h1>GAMER ZONE NEWS</h1>
+    <nav>
+      <a href="../index.html" class="navlink">Home</a>
+      <a href="#" class="navlink">News</a>
+      <a href="#" class="navlink">Reviews</a>
+      <a href="#" class="navlink">Mods</a>
+      <a href="#" class="navlink">Guides</a>
+    </nav>
+  </div>
 </header>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="News">News</a>
-  <a href="#">Reviews</a>
-  <a href="#">Mods</a>
-  <a href="#">Guides</a>
-</nav>
 
 <div class="container">
 
   <!-- COPY THIS BLOCK FOR NEW POSTS -->
   <div class="news-post">
-    <h2>HAVE YALL SEEN THAT NEW FORTNITE SEASON!?!</h2>
-    <small>Posted on November 7, 2025 by Admin</small>
-    <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/11/all-simpsons-skins-in-fortnite.jpg" alt="FORTNITE SIMPSOSN" class="post-image">
-    <p>I mean WOW...     This is the greatest day of my life. I've been a MASSIVE Simpsons fan since I was little. I'd always go to sleep with season 7 blarring on the T.V., without it i'd have sleepless nights. Fortnite released a banger for sure. They have classic characters like Moe and Ned and Bart and Homer and Marge all in one pass. Actually I think Moe isnt in the pass, neither is bart. I've played only a little bit but I was awe struck when THE WHOLE MAP was friggin' Springfield dude! I was freaking ut ging t classic areas, it's not screen acurate but they did the best they could.</p>
+  <h2>🔥 HAVE YOU SEEN THAT NEW FORTNITE SEASON!?!</h2>
+  <small>Posted on November 7, 2025 by Admin</small>
+
+  <img src="../assets/images/simplogo.jpg" 
+       alt="FORTNITE SIMPSONS" class="post-image">
+
+  <p>I mean <strong>WOW</strong>... This is the greatest day of my life. I've been a <strong>MASSIVE Simpsons fan</strong> since I was little. I'd always go to sleep with season 7 blaring on the T.V. Without it, I'd have sleepless nights.</p>
+
+  <p><em>Fortnite released a banger for sure.</em> They have classic characters like Moe and Ned and Bart and Homer and Marge all in one pass. Actually, I think Moe isn't in the pass, and neither is Bart.</p>
+
+  <p>I've played only a little bit, but I was awe-struck when <strong>THE WHOLE MAP was friggin' Springfield!</strong> I was freaking out going through classic areas. It's not screen accurate, but they did the best they could.</p>
+
+  <figure>
+    <img src="../assets/images/skins.jpg" 
+         alt="Classic Springfield streets in Fortnite" class="post-image">
+    <figcaption>Here are like some of the skins (I tried to cut them out the best I could)</figcaption>
+  </figure>
+
+  <div class="video-container">
     <iframe
-      width="800"
-      height="450"
       src="https://www.youtube.com/embed/xZU-XOg4-Rk?si=0q3-QnGxoV_8Cq2x"
       title="SIMPSONS FORTNITE CINEMATIC"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
+    <small>Watch the cinematic trailer of the new Fortnite season</small>
   </div>
 
-  <div class="news-post">
-    <h2>🎮 Pizza Tower Update Adds “Noise Hard Mode”</h2>
-    <small>Posted on November 6, 2025 by Admin</small>
-    <div class="video-container">
-    <iframe
-      width="800"
-      height="450"
-      src="https://www.youtube.com/embed/3nQNiWdeH2Q"
-      title="Halo Combat Evolved Trailer"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-    <p>The latest Pizza Tower patch introduces a brutal new mode featuring The Noise as a playable character in a more chaotic, remixed world. Expect faster enemies, higher scores, and pure chaos as Peppino’s rival takes the spotlight...</p>
-  </div>
+  <p>Overall, this season is a <strong>must-play</strong> for any Fortnite fan and a <em>nostalgic trip</em> for Simpsons lovers. The attention to detail on Springfield is incredible, and it’s obvious the devs had fun with this one.</p>
+</div>
   <!-- END COPY BLOCK -->
 
 </div>
