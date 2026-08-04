@@ -114,4 +114,8 @@ section ul {
         grid-template-columns: 1fr;
         gap: 0;
     }
+
+    .right {
+        margin: .5rem 0;
+    }
 }
